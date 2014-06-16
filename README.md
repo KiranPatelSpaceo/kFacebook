@@ -3,7 +3,7 @@ kFacebook
 
 Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and Image on FBWallPost Text and image to FB’ Friends’s wall,Twitter Login,Fetch Twitter friends's List
 
-
+====================================================================================================
 /*--------------Facebook Login-----------------------------*/
 
 [kFacebook FacebookLogin:^(NSDictionary *dictonary, BOOL success) {
@@ -13,6 +13,7 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
             NSLog(@"Login Fail");
     }]; 
     
+====================================================================================================
 /*----------------------Post Text and Image on Facebook Wall-------------------------*/
 
 [kFacebook FacebookPost_Text:@"This is kfacebook Test" image:[UIImage imageNamed:@"22.jpg"] :^(BOOL success) {
@@ -22,6 +23,7 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
             NSLog(@"Fail");
     }];
     
+====================================================================================================
 /*---------------------------Get Friends list of Facebook-------------------------*/
 
 [kFacebook FacebookGetFriendsList:^(NSDictionary *dictonary, BOOL success) {
@@ -32,6 +34,7 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
             NSLog(@"Fail");
     }];
   
+====================================================================================================
 /*-----------------------------Post Text and Image to Friend's wall--------------------*/
 
    NSMutableDictionary *parmaDic = [[NSMutableDictionary alloc]init];
@@ -67,7 +70,8 @@ NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
   [kFacebook FacebookLogOut:^(BOOL success) {
          NSLog(@"Successfully Logout.");
     }];
-    
+
+====================================================================================================
 /*-------------------------------Twitter Login-----------------------*/ 
 /*  0  =  Last Twitter Account from Setting
         1  =  First Twitter Account from Setting
@@ -80,7 +84,8 @@ NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
         }else
             NSLog(@"Fail");
     }];
-    
+   
+====================================================================================================    
 /*-----------------------------Fetch Friend list of Twitter-------------------*/
 
 [kFacebook TwitterGetFriendslist_WithAccountIndex:0  :^(NSArray *arrayFriendsList, BOOL success) {
