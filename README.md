@@ -14,6 +14,7 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
     }]; 
     
 /*----------------------Post Text and Image on Facebook Wall-------------------------*/
+
 [kFacebook FacebookPost_Text:@"This is kfacebook Test" image:[UIImage imageNamed:@"22.jpg"] :^(BOOL success) {
         if (success) {
             NSLog(@"Successfully posted");
@@ -22,6 +23,7 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
     }];
     
 /*---------------------------Get Friends list of Facebook-------------------------*/
+
 [kFacebook FacebookGetFriendsList:^(NSDictionary *dictonary, BOOL success) {
         if (success) {
             NSArray *arryData=[dictonary valueForKey:@"data"];
