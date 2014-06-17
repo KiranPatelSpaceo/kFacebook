@@ -60,7 +60,58 @@
         DisplayAlertWithTitle(@"No internet connection", @"kFacebook");
     }
 }
++(void)FacebookAllAlbumsList:(void (^)(NSDictionary *dictonary,BOOL success))completion{
 
+   
+    
+    if ([SharedObj isNetworkReachable]) {
+        
+        void(^SendRequestBlock)(void)=^{
+            
+            [FBRequestConnection startWithGraphPath:@"/me/albums"
+                                         parameters:nil
+                                         HTTPMethod:@"GET"
+                                  completionHandler:^(
+                                                      FBRequestConnection *connection,
+                                                      id result,
+                                                      NSError *error
+                                                      ) {
+                                      if(!error)
+                                      {
+                                          
+                                          completion(result,YES);
+                                      }
+                                      else{
+                                          completion(nil,NO);
+                                          DisplayAlertWithTitle(error.description, @"kFacebook");
+                                      }                                  }];
+   
+        };
+        if (FBSession.activeSession.isOpen) {
+            // login is integrated
+            SendRequestBlock();
+        } else {
+            NSArray *arryPermission=@[@"user_photos"];
+            [FBSession openActiveSessionWithReadPermissions:arryPermission allowLoginUI:YES completionHandler:^(FBSession *session, FBSessionState status, NSError *error) {
+                if (error) {
+                    DisplayAlertWithTitle(error.description, @"kFacebook");
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        if (completion)
+                            completion(nil,NO);
+                    });
+                    
+                } else if (FB_ISSESSIONOPENWITHSTATE(status)) {
+                    SendRequestBlock();
+                }
+            }];
+            
+        }
+    }
+    else{
+        completion(nil,NO);
+        DisplayAlertWithTitle(@"No internet connection", @"kFacebook");
+    }
+}
 +(void)FacebookLogOut:(void (^)(BOOL success))completion{
     [FBSession.activeSession closeAndClearTokenInformation];
     [FBSession.activeSession close];

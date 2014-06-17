@@ -64,8 +64,18 @@
 }
 
 - (IBAction)btnLogoutPressed:(id)sender {
+    
+   
     [kFacebook FacebookLogOut:^(BOOL success) {
          NSLog(@"Successfully Logout.");
+    }];
+}
+- (IBAction)btnGetAlbumListPressed:(id)sender {
+    [kFacebook FacebookAllAlbumsList:^(NSDictionary *dictonary, BOOL success) {
+        if (success) {
+            NSLog(@"%@",dictonary);
+        }else
+            NSLog(@"Fail");
     }];
 }
 

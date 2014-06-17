@@ -117,6 +117,8 @@ typedef NS_OPTIONS(NSUInteger, TwitterAccountSelection) {
   TwitterAccountSelection 1   =  First twitter Account From Setting
   TwitterAccountSelection 2   =  All twitter Accounts From Setting
  */
++(void)FacebookAllAlbumsList:(void (^)(NSDictionary *dictonary,BOOL success))completion;
+
 
 +(void)TwitterLogin_Whichone:(TwitterAccountSelection)AccountSelection :(void (^)(NSArray *TwitterData,BOOL success))completion;
 
