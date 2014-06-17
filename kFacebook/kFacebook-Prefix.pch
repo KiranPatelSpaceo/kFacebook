@@ -14,5 +14,4 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #define SharedObj             [GlobalSharedClass sharedInstance]
-#define DisplayAlertWithTitle(msg,title) {UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alertView show];}
 #endif

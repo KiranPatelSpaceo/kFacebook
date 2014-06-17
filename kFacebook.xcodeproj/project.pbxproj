@@ -11,6 +11,8 @@
 		5E0BAA621950070700F1654B /* KnoxnewsTwittericon_400x400.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E0BAA5F1950070700F1654B /* KnoxnewsTwittericon_400x400.jpg */; };
 		5E0BAA6619500A6A00F1654B /* facebook-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0BAA6419500A6A00F1654B /* facebook-icon.png */; };
 		5E0BAA6719500A6A00F1654B /* pastel_twitter_icon_by_royal_exo-d5hutau.png in Resources */ = {isa = PBXBuildFile; fileRef = 5E0BAA6519500A6A00F1654B /* pastel_twitter_icon_by_royal_exo-d5hutau.png */; };
+		5E0BAA6D1950185A00F1654B /* kFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0BAA6A1950185A00F1654B /* kFacebook.m */; };
+		5E0BAA6E1950185A00F1654B /* NetConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0BAA6C1950185A00F1654B /* NetConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5E98CFE31921DFEB003BD0BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E98CFE21921DFEB003BD0BD /* Foundation.framework */; };
 		5E98CFE51921DFEB003BD0BD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E98CFE41921DFEB003BD0BD /* CoreGraphics.framework */; };
 		5E98CFE71921DFEB003BD0BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E98CFE61921DFEB003BD0BD /* UIKit.framework */; };
@@ -26,8 +28,6 @@
 		5E98D00C1921DFEB003BD0BD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E98D00A1921DFEB003BD0BD /* InfoPlist.strings */; };
 		5E98D00E1921DFEB003BD0BD /* kFacebookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E98D00D1921DFEB003BD0BD /* kFacebookTests.m */; };
 		5E98D0181921E0A7003BD0BD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E98D0171921E0A7003BD0BD /* FacebookSDK.framework */; };
-		5E98D01D192B6CC5003BD0BD /* kFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E98D01C192B6CC5003BD0BD /* kFacebook.m */; };
-		5E98D020192B7127003BD0BD /* NetConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E98D01F192B7127003BD0BD /* NetConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5EA426B419404E4E00894CF2 /* 22.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5EA426B319404E4E00894CF2 /* 22.jpg */; };
 		5EC677A419277FB000983751 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC677A319277FB000983751 /* Twitter.framework */; };
 		5EC677A619277FB800983751 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EC677A519277FB800983751 /* Social.framework */; };
@@ -48,6 +48,10 @@
 		5E0BAA5F1950070700F1654B /* KnoxnewsTwittericon_400x400.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = KnoxnewsTwittericon_400x400.jpg; sourceTree = "<group>"; };
 		5E0BAA6419500A6A00F1654B /* facebook-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "facebook-icon.png"; sourceTree = "<group>"; };
 		5E0BAA6519500A6A00F1654B /* pastel_twitter_icon_by_royal_exo-d5hutau.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pastel_twitter_icon_by_royal_exo-d5hutau.png"; sourceTree = "<group>"; };
+		5E0BAA691950185A00F1654B /* kFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kFacebook.h; sourceTree = "<group>"; };
+		5E0BAA6A1950185A00F1654B /* kFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kFacebook.m; sourceTree = "<group>"; };
+		5E0BAA6B1950185A00F1654B /* NetConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConnection.h; sourceTree = "<group>"; };
+		5E0BAA6C1950185A00F1654B /* NetConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConnection.m; sourceTree = "<group>"; };
 		5E98CFDF1921DFEB003BD0BD /* kFacebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kFacebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E98CFE21921DFEB003BD0BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5E98CFE41921DFEB003BD0BD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -68,10 +72,6 @@
 		5E98D00B1921DFEB003BD0BD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5E98D00D1921DFEB003BD0BD /* kFacebookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = kFacebookTests.m; sourceTree = "<group>"; };
 		5E98D0171921E0A7003BD0BD /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
-		5E98D01B192B6CC4003BD0BD /* kFacebook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = kFacebook.h; sourceTree = "<group>"; };
-		5E98D01C192B6CC5003BD0BD /* kFacebook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = kFacebook.m; sourceTree = "<group>"; };
-		5E98D01E192B7127003BD0BD /* NetConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConnection.h; sourceTree = "<group>"; };
-		5E98D01F192B7127003BD0BD /* NetConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConnection.m; sourceTree = "<group>"; };
 		5EA426B319404E4E00894CF2 /* 22.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 22.jpg; sourceTree = "<group>"; };
 		5EC677A319277FB000983751 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 		5EC677A519277FB800983751 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -104,6 +104,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E0BAA681950185A00F1654B /* kFacebookClass */ = {
+			isa = PBXGroup;
+			children = (
+				5E0BAA691950185A00F1654B /* kFacebook.h */,
+				5E0BAA6A1950185A00F1654B /* kFacebook.m */,
+				5E0BAA6B1950185A00F1654B /* NetConnection.h */,
+				5E0BAA6C1950185A00F1654B /* NetConnection.m */,
+			);
+			path = kFacebookClass;
+			sourceTree = SOURCE_ROOT;
+		};
 		5E98CFD61921DFEB003BD0BD = {
 			isa = PBXGroup;
 			children = (
@@ -140,12 +151,9 @@
 		5E98CFE81921DFEB003BD0BD /* kFacebook */ = {
 			isa = PBXGroup;
 			children = (
-				5E98D01E192B7127003BD0BD /* NetConnection.h */,
-				5E98D01F192B7127003BD0BD /* NetConnection.m */,
+				5E0BAA681950185A00F1654B /* kFacebookClass */,
 				5E98CFF11921DFEB003BD0BD /* AppDelegate.h */,
 				5E98CFF21921DFEB003BD0BD /* AppDelegate.m */,
-				5E98D01B192B6CC4003BD0BD /* kFacebook.h */,
-				5E98D01C192B6CC5003BD0BD /* kFacebook.m */,
 				5E98CFF41921DFEB003BD0BD /* Main.storyboard */,
 				5E98CFF71921DFEB003BD0BD /* ViewController.h */,
 				5E98CFF81921DFEB003BD0BD /* ViewController.m */,
@@ -293,9 +301,9 @@
 			files = (
 				5E98CFF91921DFEB003BD0BD /* ViewController.m in Sources */,
 				5E98CFF31921DFEB003BD0BD /* AppDelegate.m in Sources */,
-				5E98D020192B7127003BD0BD /* NetConnection.m in Sources */,
+				5E0BAA6E1950185A00F1654B /* NetConnection.m in Sources */,
 				5E98CFEF1921DFEB003BD0BD /* main.m in Sources */,
-				5E98D01D192B6CC5003BD0BD /* kFacebook.m in Sources */,
+				5E0BAA6D1950185A00F1654B /* kFacebook.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

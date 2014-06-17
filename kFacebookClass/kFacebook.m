@@ -13,6 +13,7 @@
 #pragma mark -
 #pragma mark - Facebook
 #pragma mark -
+#define DisplayAlertWithTitle(msg,title) {UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:title message:msg delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil]; [alertView show];}
 
 //TODO: Login/Logout Method
 +(void)FacebookLogin:(void (^)(NSDictionary *dictonary,BOOL success))completion{
