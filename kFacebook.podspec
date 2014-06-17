@@ -14,9 +14,9 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/kiran5232/kFacebook.git", :tag => "1.0" }
 
- s.source_files  = "kFacebook/*.{h,m}"
+ s.source_files  = "kFacebookClass/*.{h,m}"
   s.platform     = "ios"
   s.platform     = "ios", "6.0"
-   s.framework  = "UIKit"
+  s.framework  = "Social", "Twitter","FacebookSDK"
 
 end

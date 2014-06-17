@@ -7,8 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <FacebookSDK/FacebookSDK.h>
-#import <Twitter/Twitter.h>
 #import "NetConnection.h"
 
 typedef NS_OPTIONS(NSUInteger, TwitterAccountSelection) {
