@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7D8353B9-DBD0-49DA-90CF-9E7C8983148D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>kFacebook</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>7A0DE013-3C77-4D18-994A-93116A7F680C</key>
+		<string>https://github.com/kiran5232/Kfacebook.git</string>
+		<key>84D7CA3E-6D59-4076-A739-4A660647D142</key>
+		<string>https://github.com/kiran5232/kFacebook.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>kFacebook.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>7A0DE013-3C77-4D18-994A-93116A7F680C</key>
+		<string>../../kFacebook</string>
+		<key>84D7CA3E-6D59-4076-A739-4A660647D142</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kiran5232/kFacebook.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>84D7CA3E-6D59-4076-A739-4A660647D142</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>84D7CA3E-6D59-4076-A739-4A660647D142</string>
+			<key>IDESourceControlWCCName</key>
+			<string>kFacebook</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>7A0DE013-3C77-4D18-994A-93116A7F680C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>kFacebook</string>
+		</dict>
+	</array>
+</dict>
+</plist>

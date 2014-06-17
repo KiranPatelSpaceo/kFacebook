@@ -51,5 +51,7 @@
 	</array>
 	<key>FacebookAppID</key>
 	<string>292876534210679</string>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
 </dict>
 </plist>
