@@ -6,6 +6,7 @@ You will get FacebookKeyID
 
 You have to put in info.plist file.
 1)URL Types->Item 0-> URL Schemes -> Item 0-> YourFacebookKey(with fb keyword)
+
 2)FacebookAppID-> YourFacebookKey
 
 
@@ -19,6 +20,7 @@ Then Put Below Methods in AppDelgate.m file
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
 {
     return YES;
+
 }
 
 
@@ -35,7 +37,8 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
             NSLog(@"SuccessfullyLogin");
         }else
             NSLog(@"Login Fail");
-    }]; 
+            
+ }]; 
     
 ====================================================================================================
 /*----------------------Post Text and Image on Facebook Wall-------------------------*/
@@ -56,7 +59,8 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
             NSLog(@"Friends list Count   =======  %lu",(unsigned long)arryData.count);
         }else
             NSLog(@"Fail");
-    }];
+            
+  }];
   
 ====================================================================================================
 /*-----------------------------Post Text and Image to Friend's wall--------------------*/
@@ -107,6 +111,7 @@ NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
             NSLog(@"%@",TwitterData);
         }else
             NSLog(@"Fail");
+            
     }];
    
 ====================================================================================================    
@@ -119,5 +124,6 @@ NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
             NSLog(@"%@",arrayFriendsList);
         }else
             NSLog(@"Fail");
-    }];
+            
+ }];
   
