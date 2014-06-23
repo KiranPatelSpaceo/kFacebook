@@ -5,6 +5,7 @@ First Create Facebook App ID https://developers.facebook.com
 You will get FacebookKeyID
 
 You have to put in info.plist file.
+
 1)URL Types->Item 0-> URL Schemes -> Item 0-> YourFacebookKey(with fb keyword)
 
 2)FacebookAppID-> YourFacebookKey
@@ -34,27 +35,27 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
 
 
 
-[kFacebook FacebookLogin:^(NSDictionary *dictonary, BOOL success) {
+        [kFacebook FacebookLogin:^(NSDictionary *dictonary, BOOL success) {
 
-        if (success) {
-        
-            NSLog(@"SuccessfullyLogin");
-        }else
-            NSLog(@"Login Fail");
-}]; 
+                if (success) {
+                
+                    NSLog(@"SuccessfullyLogin");
+                }else
+                    NSLog(@"Login Fail");
+        }]; 
     
 ====================================================================================================
 /*----------------------Post Text and Image on Facebook Wall-------------------------*/
 
-[kFacebook FacebookPost_Text:@"This is kfacebook Test" image:[UIImage imageNamed:@"22.jpg"] :^(BOOL success) {
-
-        if (success) {
+        [kFacebook FacebookPost_Text:@"This is kfacebook Test" image:[UIImage imageNamed:@"22.jpg"] :^(BOOL success)         {
         
-            NSLog(@"Successfully posted");
-        }else
-        
-            NSLog(@"Fail");
- }];
+                if (success) {
+                
+                    NSLog(@"Successfully posted");
+                }else
+                
+                    NSLog(@"Fail");
+         }];
     
 ====================================================================================================
 /*---------------------------Get Friends list of Facebook-------------------------*/
@@ -74,31 +75,31 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
 ====================================================================================================
 /*-----------------------------Post Text and Image to Friend's wall--------------------*/
 
-   NSMutableDictionary *parmaDic = [[NSMutableDictionary alloc]init];
-   
-    [parmaDic setObject:@"kFacebookTest" forKey:@"name"];
-    
-    [parmaDic setObject:@"yourfacebookfriendid" forKey:@"id"];//Pass facebook id of your friend.
-    
-    [parmaDic setObject:@"Build great social apps and get more installs." forKey:@"caption"];
-    
-    [parmaDic setObject:@"Please download App." forKey:@"description"];
-    
-    [parmaDic setObject:@"https://github.com/kiran5232/KDropDownMultipleSelection.git" forKey:@"link"];
-    
-    [parmaDic setObject:@"https://raw.github.com/fbsamples/ios-3.x-howtos/master/Images/iossdk_logo.png" forKey:@"picture"];
-    
-    
- [kFacebook FacebookPostOnFriendWall:parmaDic :^(BOOL success) {
-   
-       if (success) {
-       
-           NSLog(@"Successfully posted");
+           NSMutableDictionary *parmaDic = [[NSMutableDictionary alloc]init];
            
-       }else
-       
-           NSLog(@"Fail");
-}];
+            [parmaDic setObject:@"kFacebookTest" forKey:@"name"];
+            
+            [parmaDic setObject:@"yourfacebookfriendid" forKey:@"id"];//Pass facebook id of your friend.
+            
+            [parmaDic setObject:@"Build great social apps and get more installs." forKey:@"caption"];
+            
+            [parmaDic setObject:@"Please download App." forKey:@"description"];
+            
+            [parmaDic setObject:@"https://github.com/kiran5232/KDropDownMultipleSelection.git" forKey:@"link"];
+            
+            [parmaDic setObject:@"https://raw.github.com/fbsamples/ios-3.x-howtos/master/Images/iossdk_logo.png" forKey:@"picture"];
+    
+    
+                 [kFacebook FacebookPostOnFriendWall:parmaDic :^(BOOL success) {
+                   
+                       if (success) {
+                       
+                           NSLog(@"Successfully posted");
+                           
+                       }else
+                       
+                           NSLog(@"Fail");
+                }];
 /*--------------------------------------Post Text on Facebook Page--------------------------*/
 
         NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -125,6 +126,7 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
         [kFacebook FacebookLogOut:^(BOOL success) {
   
          NSLog(@"Successfully Logout.");
+         
          }];
 
 ====================================================================================================
@@ -141,33 +143,33 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
   */
      
      
-   [kFacebook TwitterLogin_Whichone:1 :^(NSArray *TwitterData, BOOL success) {
-    
-        if (success) {
-        
-            NSLog(@"Successfully Login");
-            NSLog(@"%@",TwitterData);
+           [kFacebook TwitterLogin_Whichone:1 :^(NSArray *TwitterData, BOOL success) {
             
-        }else
-        
-            NSLog(@"Fail");
-            
- }];
+                if (success) {
+                
+                    NSLog(@"Successfully Login");
+                    NSLog(@"%@",TwitterData);
+                    
+                }else
+                
+                    NSLog(@"Fail");
+                    
+         }];
    
 ====================================================================================================    
 /*-----------------------------Fetch Friend list of Twitter-------------------*/
 
 
-[kFacebook TwitterGetFriendslist_WithAccountIndex:0  :^(NSArray *arrayFriendsList, BOOL success) {
-       
-        if (success) {
-        
-            NSLog(@"Successfully Login");
-            NSLog(@"%@",arrayFriendsList);
-            
-        }else
-        
-            NSLog(@"Fail");
-            
- }];
+                [kFacebook TwitterGetFriendslist_WithAccountIndex:0  :^(NSArray *arrayFriendsList, BOOL success) {
+                       
+                        if (success) {
+                        
+                            NSLog(@"Successfully Login");
+                            NSLog(@"%@",arrayFriendsList);
+                            
+                        }else
+                        
+                            NSLog(@"Fail");
+                            
+                 }];
   
