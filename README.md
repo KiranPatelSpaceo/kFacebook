@@ -53,7 +53,9 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
 /*---------------------------Get Friends list of Facebook-------------------------*/
 
 [kFacebook FacebookGetFriendsList:^(NSDictionary *dictonary, BOOL success) {
+
         if (success) {
+        
             NSArray *arryData=[dictonary valueForKey:@"data"];
             NSLog(@"Friends list Count   =======  %lu",(unsigned long)arryData.count);
         }else
