@@ -32,12 +32,13 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
 /*--------------Facebook Login-----------------------------*/
 
 [kFacebook FacebookLogin:^(NSDictionary *dictonary, BOOL success) {
+
         if (success) {
+        
             NSLog(@"SuccessfullyLogin");
         }else
             NSLog(@"Login Fail");
-            
- }]; 
+}]; 
     
 ====================================================================================================
 /*----------------------Post Text and Image on Facebook Wall-------------------------*/
@@ -60,8 +61,7 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
             NSLog(@"Friends list Count   =======  %lu",(unsigned long)arryData.count);
         }else
             NSLog(@"Fail");
-            
-  }];
+}];
   
 ====================================================================================================
 /*-----------------------------Post Text and Image to Friend's wall--------------------*/
@@ -73,13 +73,15 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
     [parmaDic setObject:@"Please download App." forKey:@"description"];
     [parmaDic setObject:@"https://github.com/kiran5232/KDropDownMultipleSelection.git" forKey:@"link"];
     [parmaDic setObject:@"https://raw.github.com/fbsamples/ios-3.x-howtos/master/Images/iossdk_logo.png" forKey:@"picture"];
+    
    [kFacebook FacebookPostOnFriendWall:parmaDic :^(BOOL success) {
+   
        if (success) {
+       
            NSLog(@"Successfully posted");
        }else
            NSLog(@"Fail");
-
-   }];
+}];
 /*--------------------------------------Post Text on Facebook Page--------------------------*/
 
 NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
@@ -97,6 +99,7 @@ NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
     
 /*-------------------------------Facebook Logout-----------------------*/
   [kFacebook FacebookLogOut:^(BOOL success) {
+  
          NSLog(@"Successfully Logout.");
     }];
 
@@ -107,13 +110,16 @@ NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
         2 =  All Twitter Accounts from Setting
      */
     [kFacebook TwitterLogin_Whichone:1 :^(NSArray *TwitterData, BOOL success) {
+    
         if (success) {
+        
             NSLog(@"Successfully Login");
             NSLog(@"%@",TwitterData);
         }else
+        
             NSLog(@"Fail");
             
-    }];
+ }];
    
 ====================================================================================================    
 /*-----------------------------Fetch Friend list of Twitter-------------------*/
