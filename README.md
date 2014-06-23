@@ -11,16 +11,17 @@ You have to put in info.plist file.
 
 
 Then Put Below Methods in AppDelgate.m file
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
 
-        return [FBSession.activeSession handleOpenURL:url];
-}
+        - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
 
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+                         return [FBSession.activeSession handleOpenURL:url];
+        }
+
+        - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
    
-         return YES;
-
-}
+                return YES;
+        
+        }
 
 
 After That use KFacebook classses in your Project.
@@ -128,11 +129,19 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
 
 ====================================================================================================
 /*-------------------------------Twitter Login-----------------------*/ 
-/*  0  =  Last Twitter Account from Setting
+
+/* 
+
+        0  =  Last Twitter Account from Setting
+
         1  =  First Twitter Account from Setting
+        
         2 =  All Twitter Accounts from Setting
-     */
-    [kFacebook TwitterLogin_Whichone:1 :^(NSArray *TwitterData, BOOL success) {
+    
+  */
+     
+     
+   [kFacebook TwitterLogin_Whichone:1 :^(NSArray *TwitterData, BOOL success) {
     
         if (success) {
         
@@ -147,6 +156,7 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
    
 ====================================================================================================    
 /*-----------------------------Fetch Friend list of Twitter-------------------*/
+
 
 [kFacebook TwitterGetFriendslist_WithAccountIndex:0  :^(NSArray *arrayFriendsList, BOOL success) {
        
