@@ -1,6 +1,30 @@
 kFacebook
 =========
 
+First Create Facebook App ID https://developers.facebook.com
+You will get FacebookKeyID
+
+You have to put in info.plist file.
+1)URL Types->Item 0-> URL Schemes -> Item 0-> YourFacebookKey(with fb keyword)
+2)FacebookAppID-> YourFacebookKey
+
+
+Then Put Below Methods in AppDelgate.m file
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+
+        return [FBSession.activeSession handleOpenURL:url];
+}
+
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return YES;
+}
+
+
+After That use KFacebook classses in your Project.
+
+
 Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and Image on FBWallPost Text and image to FB’ Friends’s wall,Twitter Login,Fetch Twitter friends's List
 
 ====================================================================================================
