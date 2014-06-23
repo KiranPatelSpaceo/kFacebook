@@ -4,7 +4,7 @@ kFacebook
 First Create Facebook App ID https://developers.facebook.com
 You will get FacebookKeyID
 
-You have to put in info.plist file.
+You have to put it into info.plist file.
 
 1)URL Types->Item 0-> URL Schemes -> Item 0-> YourFacebookKey(with fb keyword)
 
