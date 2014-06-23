@@ -11,15 +11,14 @@ You have to put in info.plist file.
 
 
 Then Put Below Methods in AppDelgate.m file
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
-{
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation{
 
         return [FBSession.activeSession handleOpenURL:url];
 }
 
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
-{
-    return YES;
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+   
+         return YES;
 
 }
 
