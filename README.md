@@ -31,6 +31,8 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
 ====================================================================================================
 /*--------------Facebook Login-----------------------------*/
 
+
+
 [kFacebook FacebookLogin:^(NSDictionary *dictonary, BOOL success) {
 
         if (success) {
@@ -44,64 +46,85 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
 /*----------------------Post Text and Image on Facebook Wall-------------------------*/
 
 [kFacebook FacebookPost_Text:@"This is kfacebook Test" image:[UIImage imageNamed:@"22.jpg"] :^(BOOL success) {
+
         if (success) {
+        
             NSLog(@"Successfully posted");
         }else
+        
             NSLog(@"Fail");
-    }];
+ }];
     
 ====================================================================================================
 /*---------------------------Get Friends list of Facebook-------------------------*/
 
-[kFacebook FacebookGetFriendsList:^(NSDictionary *dictonary, BOOL success) {
+  [kFacebook FacebookGetFriendsList:^(NSDictionary *dictonary, BOOL success) {
 
         if (success) {
         
             NSArray *arryData=[dictonary valueForKey:@"data"];
             NSLog(@"Friends list Count   =======  %lu",(unsigned long)arryData.count);
+            
         }else
+        
             NSLog(@"Fail");
-}];
+  }];
   
 ====================================================================================================
 /*-----------------------------Post Text and Image to Friend's wall--------------------*/
 
    NSMutableDictionary *parmaDic = [[NSMutableDictionary alloc]init];
+   
     [parmaDic setObject:@"kFacebookTest" forKey:@"name"];
+    
     [parmaDic setObject:@"yourfacebookfriendid" forKey:@"id"];//Pass facebook id of your friend.
+    
     [parmaDic setObject:@"Build great social apps and get more installs." forKey:@"caption"];
+    
     [parmaDic setObject:@"Please download App." forKey:@"description"];
+    
     [parmaDic setObject:@"https://github.com/kiran5232/KDropDownMultipleSelection.git" forKey:@"link"];
+    
     [parmaDic setObject:@"https://raw.github.com/fbsamples/ios-3.x-howtos/master/Images/iossdk_logo.png" forKey:@"picture"];
     
-   [kFacebook FacebookPostOnFriendWall:parmaDic :^(BOOL success) {
+    
+ [kFacebook FacebookPostOnFriendWall:parmaDic :^(BOOL success) {
    
        if (success) {
        
            NSLog(@"Successfully posted");
+           
        }else
+       
            NSLog(@"Fail");
 }];
 /*--------------------------------------Post Text on Facebook Page--------------------------*/
 
-NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
+        NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
                             @"This is a kFacebookTest", @"message",
                             nil
                             ];
-    NSString *strPageId=@"facebookpageid";//Change your Page Id;
-    [kFacebook FacebookPostOnFacebookPage:params page_id:strPageId :^(NSDictionary *responce, BOOL success) {
+                            
+        NSString *strPageId=@"facebookpageid";//Change your Page Id;
+        
+          [kFacebook FacebookPostOnFacebookPage:params page_id:strPageId :^(NSDictionary *responce, BOOL success) {
+          
         if (success) {
+        
           //  NSLog(@"Responce ===== %@",responce);
             NSLog(@"Successfully posted");
+            
         }else
+        
             NSLog(@"Fail");
     }];
     
 /*-------------------------------Facebook Logout-----------------------*/
-  [kFacebook FacebookLogOut:^(BOOL success) {
+
+        [kFacebook FacebookLogOut:^(BOOL success) {
   
          NSLog(@"Successfully Logout.");
-    }];
+         }];
 
 ====================================================================================================
 /*-------------------------------Twitter Login-----------------------*/ 
@@ -115,6 +138,7 @@ NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
         
             NSLog(@"Successfully Login");
             NSLog(@"%@",TwitterData);
+            
         }else
         
             NSLog(@"Fail");
@@ -127,9 +151,12 @@ NSDictionary *params = [NSDictionary dictionaryWithObjectsAndKeys:
 [kFacebook TwitterGetFriendslist_WithAccountIndex:0  :^(NSArray *arrayFriendsList, BOOL success) {
        
         if (success) {
+        
             NSLog(@"Successfully Login");
             NSLog(@"%@",arrayFriendsList);
+            
         }else
+        
             NSLog(@"Fail");
             
  }];
