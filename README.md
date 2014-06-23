@@ -60,17 +60,17 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
 ====================================================================================================
 /*---------------------------Get Friends list of Facebook-------------------------*/
 
-  [kFacebook FacebookGetFriendsList:^(NSDictionary *dictonary, BOOL success) {
-
-        if (success) {
+          [kFacebook FacebookGetFriendsList:^(NSDictionary *dictonary, BOOL success) {
         
-            NSArray *arryData=[dictonary valueForKey:@"data"];
-            NSLog(@"Friends list Count   =======  %lu",(unsigned long)arryData.count);
-            
-        }else
-        
-            NSLog(@"Fail");
-  }];
+                if (success) {
+                
+                    NSArray *arryData=[dictonary valueForKey:@"data"];
+                    NSLog(@"Friends list Count   =======  %lu",(unsigned long)arryData.count);
+                    
+                }else
+                
+                    NSLog(@"Fail");
+          }];
   
 ====================================================================================================
 /*-----------------------------Post Text and Image to Friend's wall--------------------*/
@@ -160,16 +160,16 @@ Facebook all methods are integratedlogin,logout,Fetch Friends list,Post Text and
 /*-----------------------------Fetch Friend list of Twitter-------------------*/
 
 
-                [kFacebook TwitterGetFriendslist_WithAccountIndex:0  :^(NSArray *arrayFriendsList, BOOL success) {
+          [kFacebook TwitterGetFriendslist_WithAccountIndex:0  :^(NSArray *arrayFriendsList, BOOL success) {
                        
-                        if (success) {
+                if (success) {
                         
-                            NSLog(@"Successfully Login");
-                            NSLog(@"%@",arrayFriendsList);
+                        NSLog(@"Successfully Login");
+                        NSLog(@"%@",arrayFriendsList);
                             
-                        }else
+                }else
                         
-                            NSLog(@"Fail");
+                         NSLog(@"Fail");
                             
-                 }];
+         }];
   
