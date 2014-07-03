@@ -14,6 +14,7 @@
 		5E0BAA6D1950185A00F1654B /* kFacebook.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0BAA6A1950185A00F1654B /* kFacebook.m */; };
 		5E0BAA6E1950185A00F1654B /* NetConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E0BAA6C1950185A00F1654B /* NetConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		5E1A67EB1955808700F0F396 /* 04_blurred_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5E1A67EA1955808700F0F396 /* 04_blurred_bg.jpg */; };
+		5E78D6A819651B5600F2AFF8 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E78D6A719651B5600F2AFF8 /* Accounts.framework */; };
 		5E98CFE31921DFEB003BD0BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E98CFE21921DFEB003BD0BD /* Foundation.framework */; };
 		5E98CFE51921DFEB003BD0BD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E98CFE41921DFEB003BD0BD /* CoreGraphics.framework */; };
 		5E98CFE71921DFEB003BD0BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E98CFE61921DFEB003BD0BD /* UIKit.framework */; };
@@ -54,6 +55,7 @@
 		5E0BAA6B1950185A00F1654B /* NetConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetConnection.h; sourceTree = "<group>"; };
 		5E0BAA6C1950185A00F1654B /* NetConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetConnection.m; sourceTree = "<group>"; };
 		5E1A67EA1955808700F0F396 /* 04_blurred_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 04_blurred_bg.jpg; sourceTree = "<group>"; };
+		5E78D6A719651B5600F2AFF8 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		5E98CFDF1921DFEB003BD0BD /* kFacebook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kFacebook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E98CFE21921DFEB003BD0BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5E98CFE41921DFEB003BD0BD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -84,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E78D6A819651B5600F2AFF8 /* Accounts.framework in Frameworks */,
 				5EC677A619277FB800983751 /* Social.framework in Frameworks */,
 				5EC677A419277FB000983751 /* Twitter.framework in Frameworks */,
 				5E98CFE51921DFEB003BD0BD /* CoreGraphics.framework in Frameworks */,
@@ -139,6 +142,7 @@
 		5E98CFE11921DFEB003BD0BD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5E78D6A719651B5600F2AFF8 /* Accounts.framework */,
 				5EC677A519277FB800983751 /* Social.framework */,
 				5EC677A319277FB000983751 /* Twitter.framework */,
 				5E98D0171921E0A7003BD0BD /* FacebookSDK.framework */,
